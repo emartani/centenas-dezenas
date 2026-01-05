@@ -1,0 +1,153 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Botão Próximo Exercício alegre */
+#proximo {
+  display: inline-block;
+  padding: 15px 25px;
+  margin-top: 20px;
+  background: linear-gradient(45deg, #4caf50, #8bc34a);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+  letter-spacing: 2px;
+  animation: saltitar 1.5s infinite;
+  transition: transform 0.3s ease;
+}
+
+#proximo:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: linear-gradient(45deg, #388e3c, #66bb6a);
+}
+
+/* Animação saltitante */
+@keyframes saltitar {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-5px); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+/* Blocos */
+.linha-barra {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.label {
+  width: 100px;
+  font-weight: bold;
+}
+
+.bar {
+  display: flex;
+  gap: 2px;
+  margin-left: 10px;
+}
+
+.divisao {
+  width: 20px;
+  height: 20px;
+  background-color: #4caf50;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+
+.quantidade {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* Opções */
+.opcoes {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.opcao {
+  flex: 1 1 40%;
+  padding: 10px;
+  background-color: #87cefa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.opcao:hover {
+  background-color: #4682b4;
+  color: white;
+}
+
+/* Resultado e pontuação */
+#resultado {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#pontuacao {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 📱 Media Query para telas menores */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  #proximo {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .opcao {
+    flex: 1 1 100%;
+    font-size: 16px;
+  }
+
+  .label {
+    width: 80px;
+    font-size: 14px;
+  }
+
+  .divisao {
+    width: 16px;
+    height: 16px;
+  }
+}
