@@ -43,7 +43,7 @@ h1 {
   background: linear-gradient(45deg, #388e3c, #66bb6a);
 }
 
-/* 📱 Responsivo */
+/* 📱 Media Query para telas menores */
 @media (max-width: 600px) {
   body {
     padding: 20px;
@@ -60,5 +60,10 @@ h1 {
   .botao-fase {
     font-size: 16px;
     padding: 12px;
+    width: 100%;
+  }
+
+  .menu-fases {
+    gap: 10px;
   }
 }
