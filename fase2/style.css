@@ -1,0 +1,87 @@
+body {
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  background: linear-gradient(135deg, #fff8dc, #ffe4b5);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#proximo {
+  display: inline-block;
+  padding: 15px 25px;
+  margin-top: 20px;
+  background: linear-gradient(45deg, #ff9800, #ffc107);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  animation: saltitar 1.5s infinite;
+  transition: transform 0.3s ease;
+}
+
+#proximo:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: linear-gradient(45deg, #e65100, #ffb300);
+}
+
+@keyframes saltitar {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-5px); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+.opcoes {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.opcao {
+  flex: 1 1 30%;
+  padding: 12px;
+  background-color: #ffd54f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.opcao:hover {
+  background-color: #ffb300;
+  color: white;
+}
+
+#resultado, #pontuacao {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 600px) {
+  .container { padding: 15px; }
+  h1 { font-size: 22px; }
+  #proximo { width: 100%; font-size: 18px; }
+  .opcao { flex: 1 1 100%; font-size: 16px; }
+}

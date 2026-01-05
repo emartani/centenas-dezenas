@@ -1,0 +1,9 @@
+{
+  "numero": "341",
+  "opcoes": [
+    "3 centenas, 4 dezenas e 1 unidade",
+    "34 dezenas e 1 unidade",
+    "300 centenas e 41 unidades"
+  ],
+  "correta": "3 centenas, 4 dezenas e 1 unidade"
+}

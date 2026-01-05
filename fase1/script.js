@@ -153,6 +153,17 @@ function verificarResposta(numeroDigitado, escolhaExtenso, corretaExtenso) {
 }
 
 document.getElementById("proximo").addEventListener("click", () => {
-  exercicioAtual = exercicioAtual < totalExercicios ? exercicioAtual + 1 : 1;
-  carregarExercicio(exercicioAtual);
+  if (exercicioAtual < totalExercicios) {
+    exercicioAtual++;
+    carregarExercicio(exercicioAtual);
+  } else {
+    // Mostra mensagem de fim de fase
+    document.getElementById("exercicio-container").innerHTML = `
+      <h2>🎉 Parabéns, você concluiu a Fase 1!</h2>
+      <p>Sua pontuação final foi: ${pontuacao} / ${totalExercicios}</p>
+      <a href="../index.html" class="botao-fase">⬅️ Voltar ao Menu</a>
+    `;
+    document.getElementById("proximo").style.display = "none"; // esconde botão
+  }
 });
+
